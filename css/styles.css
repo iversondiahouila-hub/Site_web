@@ -12107,116 +12107,71 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 
 /* Curriculum vitea*/
-
-
-/* --- GLOBAL --- */
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f2f2f2;
+.cv-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
-
-/* CV OCCUPE TOUT L'ÉCRAN */
-
-.cv-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    min-height: 100vh;
-    /* 100% hauteur écran */
-    background: white;
+.cv-section h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2c3e50;
 }
 
-
-/* --- SIDEBAR --- */
-
-.sidebar {
-    width: 30%;
-    background: #1e3a8a;
-    color: white;
-    padding: 30px;
-    box-sizing: border-box;
+.cv-section .subtitle {
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 30px;
 }
 
-.sidebar h2 {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid white;
-    padding-bottom: 5px;
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 
-.sidebar ul {
-    list-style: square;
-    padding-left: 20px;
+.cv-left, .cv-right {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
 }
 
-.photo {
-    width: 130px;
-    height: 130px;
-    background: #ffffff33;
-    border-radius: 50%;
-    margin: auto;
-    margin-bottom: 20px;
+.cv-section h2 {
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  color: #3498db;
 }
 
-
-/* --- CONTENU --- */
-
-.content {
-    width: 70%;
-    padding: 40px;
-    box-sizing: border-box;
+.cv-section h3 {
+  margin-top: 15px;
+  color: #2c3e50;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 32px;
+.cv-section ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-header h3 {
-    margin: 5px 0;
-    color: #1e3a8a;
+.cv-section ul li {
+  margin: 6px 0;
+  padding-left: 15px;
+  position: relative;
 }
 
-section {
-    margin-top: 30px;
+.cv-section ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #3498db;
 }
 
-section h2 {
-    color: #1e3a8a;
-    border-left: 4px solid #1e3a8a;
-    padding-left: 10px;
-    font-size: 22px;
-}
-
-ul {
-    list-style: square;
-}
-
-
-/* --- RESPONSIVE (Mobile + Tablette) --- */
-
-@media (max-width: 900px) {
-    .cv-container {
-        flex-direction: column;
-        /* Sidebar au-dessus, contenu en dessous */
-    }
-    .sidebar,
-    .content {
-        width: 100%;
-        min-height: auto;
-    }
-    .sidebar {
-        text-align: center;
-    }
-    .sidebar ul {
-        padding-left: 0;
-        list-style: none;
-    }
-    .content {
-        padding: 20px;
-    }
+@media (max-width: 768px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
 }
